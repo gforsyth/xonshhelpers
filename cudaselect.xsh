@@ -21,7 +21,7 @@ def PATH_ADJUST(cuda):
     for i in $PATH: ##remove existing cuda from $PATH
         if '/cuda' in i:
             $PATH.remove(i)
-    $PATH.append('{}/bin'.format(cuda))
+    $PATH.insert(1, '{}/bin'.format(cuda))
 
 def main():
     for i, choice in enumerate(choices):
